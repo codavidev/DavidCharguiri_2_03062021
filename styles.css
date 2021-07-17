@@ -1,17 +1,30 @@
 /*  --------- POLICES -------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
+/* -------- ÉLÉMENTS PRINCIPAUX --------- */
 
 * {
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 body {
-    font-family: 'Raleway', sans-serif;
+    max-width: 1440px;
+    min-width: 320px;
+    margin: 0 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    }
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+h1, h2 {
+    font-size: 1,25rem;
+}
+h3 {
+    font-size: 1rem;
+}
 
 a, p {
     font-size: 14px;   
@@ -60,11 +73,8 @@ a, p {
     flex-wrap: nowrap;
     flex-direction: row;
 }
-body {
-    max-width: 1440px;
-    min-width: 320px;
-    margin: 0 2rem;
-}
+/* ------- NAVIGATION -------- */
+
 header {
     height: 120px;
 }
@@ -101,18 +111,9 @@ a:visited {
 #inscription {
     float: right;
 }
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-li { 
-    height: 3rem;
-    width: 184px;
-    list-style: none;
-}
 
-        /*  RECHERCHE */
+/* ------- RECHERCHE -------- */
+
 form {
     width: 330px;
     height: 50px;
@@ -151,7 +152,7 @@ button {
     border-radius: 12px 0 0 12px;
 }
 
-        /*  FILTRES */
+/* ------- FILTRES -------- */
 
 #Filtres i {
     padding: 1rem;
@@ -162,8 +163,7 @@ button {
     background: #DEEBFF;
     border-radius: 2rem;
 }
-#Filtres h3 {
-    font-weight: bolder;
+#Filtres {
     
 
 }
@@ -228,8 +228,17 @@ footer {
     background: #F2F2F2;
     width: 100vw;
     height: fit-content;
-
 }
-
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+li { 
+    height: 3rem;
+    width: 184px;
+    
+}
         /*MEDIA QUERIES*/
 
