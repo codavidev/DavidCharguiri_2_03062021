@@ -1,7 +1,7 @@
 /*  --------- POLICES -------- */
 
 
-/* -------- ÉLÉMENTS PRINCIPAUX --------- */
+/* -------- PARAMETRES COMMUNS --------- */
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -10,25 +10,25 @@
 body {
     max-width: 1440px;
     min-width: 320px;
-    margin: 0 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
+html * {
+    padding: 0.25rem;
+    margin: 0.25rem;
+}
 h1, h2, h3 {
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
-h1, h2 {
-    font-size: 1,25rem;
-}
-h3 {
-    font-size: 1rem;
+a, p {
+    font-size: 0.875rem;
 }
 
-a, p {
-    font-size: 14px;   
-}
+
+/*  --------- FLEX CLASS PREDEFINIS -------- */
+
 .flexStart {
     display: flex;
     justify-content: flex-start;
@@ -77,99 +77,115 @@ a, p {
 
 header {
     height: 120px;
+    margin-top: 0;
+    padding-top: 0;
 }
 #logo {
     display: flex;
-	flex-direction: row;
-	flex-wrap: baseline;
+	flex-wrap: flex-start;
 }
 #logo img {
     width: 6rem;
     height: 3rem; 
 }
-nav {
+header nav {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-top: 0;
+}
+header a:hover, .activeLink {
+	color: #0065FC;
+	border-top: 0.125rem solid #0065FC;
+}
+header ul {
+        list-style: none;
 }
 a {
-    padding: 1.5rem;
-    text-decoration: none;
+    text-decoration: black;
     color: black;
 }
-.blueLink {
-    color: #0065FC;
-}
-a:visited {
-    text-decoration: none;
-    color: #0065FC;
-}
+
 
 .BorderTopBlue {
     border-top: 2px solid #0065FC;
-    position: relative;
+    
 }
+
 #inscription {
-    float: right;
+    display: flex;
+    flex-wrap: nowrap;
+    color: #0065FC;
+    font-weight: bold;
+    
 }
 
 /* ------- RECHERCHE -------- */
-
-form {
-    width: 330px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    border: solid #F2F2F2 1px;
-    border-radius: 12px;
+form * {
+    height: 3rem;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
     font-weight: bold;
-   
+}
+form {
+    width: 26rem;
+ 
 }
 
 input {
-    border-radius: 0px;
-    border: none;
-    height: 34px;
-    font-weight: bold;
+    width: 14.5rem;
+    border: solid #F2F2F2 0.1rem;
+    border-radius: 0;
     color: black;
-    padding-left: 16px;
+    
 
 }
 button {
-    width: 132px;
-    height: 50px;
+    width: 8.25rem;
+    height: 3rem;
     background-color: #0065FC;
     color: white;
-    border-radius: 0px 12px 12px 0px;
+    border-radius: 0 0.75rem 0.75rem 0;
     border: none;
 }
 .iconMap { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px; 
+    width: 3.125rem;
+    height: 3rem; 
     background-color: #F2F2F2;
-    border-radius: 12px 0 0 12px;
+    border-radius: 0.75rem 0 0 0.75rem;
 }
 
 /* ------- FILTRES -------- */
 
-#Filtres i {
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 2rem;
+#Filtres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.filtres {
     border: 0.1rem solid #F2F2F2;
+    border-radius: 3rem;
+    padding: 0;
+
+    
+}
+.filtres * {
+    height: 3rem;
     padding: 1rem;
+    margin: 0;
+}
+.filtres i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    width: 3rem;
     background: #DEEBFF;
     border-radius: 2rem;
-}
-#Filtres {
-    
-
-}
-.filtres {
-    
-    display: flex;
 }
 
 
@@ -178,12 +194,16 @@ button {
 #Hebergements {
     flex: 2;
     display: flex;
-    height: 626px;
+    align-content: flex-start;
+    width: auto;
 }
 
 .cartesHebergements {
-    max-width: fit-content;
+    margin: auto;
+    width: auto;
+    height: 12.25rem;
     border-radius: 1.25rem;
+   
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
@@ -195,14 +215,14 @@ button {
 .imgHebergements {
     width: 14.75rem;
     height: 7rem;
-    padding: 0.25rem;
+    padding: 0;
+    margin: 0;
     border-radius: 20px 20px 0 0;
 }
 .carteDescription {
-    padding: 0.5rem;
-    margin: 0;
+ 
 }
-.rating {
+.rating i {
     padding: 0;
     margin: 0;
 }
@@ -213,32 +233,41 @@ button {
     display: flex;
     flex-wrap: wrap;
     width: 420px;
-    height: 626px;
+    
     background-color: #F2F2F2;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 .imgPopulaires {
     max-width: 128px;
-    max-height: padding-box;
-    border-radius: 20px 0px 0px 20px;
+    max-height: 8.5rem;
+    border-radius: 1.25rem 0 0 1.25rem;
 }
 
         /*FOOTER*/
 footer {
+    display: flex;
     background: #F2F2F2;
-    width: 100vw;
-    height: fit-content;
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
-ul {
+footer ul {
+    width: 30%;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-}
-li { 
-    height: 3rem;
-    width: 184px;
+    justify-content: flex-start;
     
+   
 }
+
         /*MEDIA QUERIES*/
 
+@media screen and (min-width:37,5rem) {
+    #inscription {
+        display: flex;
+        flex-wrap: right;
+
+    }
+}
