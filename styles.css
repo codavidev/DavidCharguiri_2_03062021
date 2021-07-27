@@ -6,26 +6,34 @@
 * {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+    padding: 0.25rem;
+    margin: 0.25rem;
 }
+
 body {
-    max-width: 1440px;
-    min-width: 320px;
+  margin: auto;
+  margin-top: 0;
+  padding-top: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-html * {
-    padding: 0.25rem;
-    margin: 0.25rem;
+main {
+    width: 100%;
 }
-h1, h2, h3 {
-    font-weight: bold;
+h1, h2 {
     font-size: 1.3rem;
 }
-a, p {
+a, p, h4 {
     font-size: 0.875rem;
 }
-
+a {
+    text-decoration: none;
+    color: black;
+}
+span {
+    font-weight: 600;
+}
 
 /*  --------- FLEX CLASS PREDEFINIS -------- */
 
@@ -76,51 +84,59 @@ a, p {
 /* ------- NAVIGATION -------- */
 
 header {
+    width: 100%;
     height: 120px;
-    margin-top: 0;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
 }
-#logo {
-    display: flex;
-	flex-wrap: flex-start;
+header * {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 #logo img {
     width: 6rem;
-    height: 3rem; 
+    height: 3rem;
+    
 }
 header nav {
-    width: 100%;
+    margin-left: auto;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-    padding-top: 0;
 }
-header a:hover, .activeLink {
+
+header ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+header a {
+    padding: 2rem;
+    width: 10.125rem;
+    height: 100%;
+
+} 
+
+.activeLink {
+    color: #0065FC;
+}
+a:visited {
+    text-decoration: none;
+   
+}
+nav li a:hover, .activeLink {
 	color: #0065FC;
 	border-top: 0.125rem solid #0065FC;
 }
-header ul {
-        list-style: none;
-}
-a {
-    text-decoration: black;
-    color: black;
-}
-
-
-.BorderTopBlue {
-    border-top: 2px solid #0065FC;
-    
-}
-
 #inscription {
-    display: flex;
-    flex-wrap: nowrap;
+    
     color: #0065FC;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.875rem;
     
 }
+
+
 
 /* ------- RECHERCHE -------- */
 form * {
@@ -161,54 +177,95 @@ button {
 /* ------- FILTRES -------- */
 
 #Filtres {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
 }
 
-
-.filtres {
-    border: 0.1rem solid #F2F2F2;
+#Filtres a {
+border: 0.125rem solid #F2F2F2;
     border-radius: 3rem;
-    padding: 0;
-
-    
-}
-.filtres * {
     height: 3rem;
-    padding: 1rem;
-    margin: 0;
+    display: inline-flex;
+   padding-left: 0;
+    align-items: center;
+    box-shadow: 0.25rem #0065FC;
 }
+.filtres {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 0;
+
+}
+/* animation au survol de la souris */
+#Filtres a:hover {
+  background-color: #deebff;
+  box-shadow: 0.25rem #0065FC;
+  -webkit-transition: background-color 400ms linear;
+  -ms-transition: background-color 400ms linear;
+  transition: background-color 400ms linear;
+}
+
 .filtres i {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #0065FC;
+    font-size: 1rem;
+     padding: 0;
+    margin: 0;
+    
+    
+}
+.filtresIconBG {  
     width: 3rem;
+    height: 3rem;
     background: #DEEBFF;
     border-radius: 2rem;
+    padding: 0;
+    margin: 0;
+    border: 0.125rem solid #DEEBFF;
 }
-
-
+        /*  INFO */
+#info {
+    display: flex;
+    flex-direction: row;    
+}
+#info i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #0065fc;
+    font-size: 0.875rem;
+    border: solid 1px #D9D9D9;
+    border-radius: 2rem;
+}
         /*  HEBERGEMENTS */
         
 #Hebergements {
-    flex: 2;
+   
     display: flex;
-    align-content: flex-start;
-    width: auto;
+    flex-direction: column;
+    width: 60%;
+    background-color: #F2F2F2;
+    border-radius: 1.25rem;
+    margin: auto;
 }
 
 .cartesHebergements {
-    margin: auto;
+
     width: auto;
-    height: 12.25rem;
+    height: 12.5rem;
     border-radius: 1.25rem;
-   
+    background-color: white;
+
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
   
-  .cartesHebergements:hover {
+  .cartesHebergements:hover, .cartesPopulaires:hover, .cartesActivites1:hover, .cartesActivites2:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
   }
 
@@ -217,39 +274,87 @@ button {
     height: 7rem;
     padding: 0;
     margin: 0;
-    border-radius: 20px 20px 0 0;
+    border-radius: 1rem 1rem 0 0;
 }
 .carteDescription {
- 
+    margin: 0;
+    padding: 0;
+    height: 5rem;
+}
+.carteDescription * {
+    margin-bottom: 0;
+}
+.rating {
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
 }
 .rating i {
+    
     padding: 0;
     margin: 0;
+    color: #0065FC;
 }
         /*  POPULAIRES */
         
 #Populaires {
-    flex: 1;
+
     display: flex;
     flex-wrap: wrap;
-    width: 420px;
-    
+    width: 30%;
+    flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 1.25rem;
 }
+.cartesPopulaires {
+    max-width: 21rem;
+    min-width: 20.75rem;
+    margin: auto;
+    height: 9rem;
+    background: white;
+    border-radius: 1.25rem;
+   display: flex;
+   flex-direction: row;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
 .imgPopulaires {
+    margin: 0;
+    padding: 0;
     max-width: 128px;
     max-height: 8.5rem;
-    border-radius: 1.25rem 0 0 1.25rem;
+    border-radius: 1rem 0 0 1rem;
 }
 
-        /*FOOTER*/
+        /* ACTIVITES */
+.cartesActivites1 {
+    margin: auto;
+    padding: 0;
+    width: 19rem;
+    height: 27.75rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+ .imgActivites1 {
+    max-width: 100%;
+    height: 24.25rem;
+    padding: 0;
+    margin: 0;
+    border-radius: 1.25rem 1.25rem 0 0;
+
+}
+.cartesDescriptionActivites {
+    margin: 0.5rem;
+}
+
+        /* FOOTER */
 footer {
     display: flex;
     background: #F2F2F2;
-    width: 100%;
+    width: 100vw;
     height: auto;
     margin: 0;
+    padding: 0;
 }
 footer ul {
     width: 30%;
@@ -258,10 +363,13 @@ footer ul {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
-    
-   
-}
 
+}
+footer nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
         /*MEDIA QUERIES*/
 
 @media screen and (min-width:37,5rem) {
