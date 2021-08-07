@@ -8,19 +8,20 @@ html, html * {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
-header *, section *, footer * {
+* {
+    padding: 0;
+    margin: 0;
+}
+ section *, footer * {
     
     padding: 0.25rem;
     margin: 0.25rem;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 main {
     width: 100%;
+    margin: 2vw;
 }
 /* h1, h2 {
     font-size: 1.3rem;
@@ -69,7 +70,10 @@ span {
 .flexBetween {
     display: flex;
     justify-content: space-between;
-
+}
+.flexEvenly {
+    display: flex;
+    justify-content: space-evenly;
 }
 .itemsCenter {
     display: flex;
@@ -100,19 +104,14 @@ span {
     flex-direction: column;
 }
 /* ------- NAVIGATION -------- */
-.headerGrid {
-    height: 120px;
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 
-}
 header {
     width: 100%;
     height: 120px;
   
 }
 header * {
+   
     margin: 0;
     padding: 0;
     height: 100%;
@@ -148,6 +147,7 @@ a:visited {
 }
 header nav li a:hover, .activeLink {
 	color: #0065FC;
+    padding: 1rem;
 	border-top: 0.125rem solid #0065FC;
 }
 #inscription {
@@ -230,7 +230,7 @@ input {
     border-radius: 3rem;
     height: 3rem;
    padding: 0;
-   margin: 0.75rem;
+   margin: 1vw;
 }
 .filtres {
     display: inline-flex;
@@ -286,22 +286,25 @@ input {
 }
 
         /*  HEBERGEMENTS */
-/* .Logements * {
-    margin: 1rem;
-} */
+.Logements {
+   width: 100%;
+}
 
 #Hebergements {
-   
-    display: inline-block;
-    flex-direction: column;
-    width: 60%;
+    width: 888px;
     background-color: #F2F2F2;
     border-radius: 1.25rem;
+
+    margin: 0;
+    padding: 0;
 }
 .titreHeberg {
     margin: 1rem;
 }
-
+#L1, #L2 {
+    padding: 0;
+    margin: auto;
+}
 .cartesHebergements {
     display: inline-block;
     width: fit-content;
@@ -404,78 +407,70 @@ input {
     margin: 0.5em;
 }
 
-        /* ACTIVITES */
+/* ACTIVITES */
+
 #Activites {
     width: 100%;
-
-}
-.activitesCartesContainer {
-    
-}
-/* sup clas act11 */
-.cartesActivites11, .cartesActivites1, .cartesActivites2, .cartesActivites3 {
-
     padding: 0;
-    width: 19rem;
-    background: white;
+    margin: 0;
+}
+
+/*  IMAGES ACTIVITES */
+#vieuxport {
+    background-image: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+#pomegues {
+    background-image: url(images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+#frioul {
+    background-image: url(images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+#calanques {
+    background-image: url(images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+}
+#garde {
+    background-image: url(images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+}
+#longchamp {
+    background-image: url(images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+#Activites .cartes {
+    padding: 0;
+    margin: 1vw;
+    min-width: 19rem;
+    height: 100%;
     border-radius: 1.25rem;
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.cartesActivites1 {
-  
-    height: 27.75rem;
-}
-.cartesActivites2 {
-   
-    height: 14.625rem;
-}
-.cartesActivites3 {
-    height: 12.125rem;
-}
-.imgActivites1, .imgActivites2, .imgActivites3 {
 
-max-width: 100%;
-  padding: 0;
-    margin: 0;
-    border-radius: 1.25rem 1.25rem 0 0;
-}
-/*  */
-.imgActivites11 {
-
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    background-image: url(images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
     background-size: cover;
    background-repeat: no-repeat;
-}
-.cartesActivites11 {
-    padding: 0;
-    height: auto;
-    width: 19rem;
-}
-/*  */
-/* .imgActivites1 {
-    height: 24.25rem;
-}
-.imgActivites2 {
-    height: 11.125rem;
-}
-.imgActivites3 {
-    height: 6.75rem;
-} */
-.cartesDescriptionActivites {
-    height: 3rem;
-}
-.cartesDescriptionActivites11 {
-    padding: 0%;
-    margin-top: 100%;
-    height: 3rem;
-    background: cyan;
+   background-position: center;
+    display: flex;
+    align-items: flex-end;
+
 }
 
+.cartesDescriptionActivites {
+    width: 100%;
+    border-radius: 0 0 1.25rem 1.25rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 100%;
+    background: white;
+    justify-content: center;
+}
+#Activites h4 {
+    margin: 1rem;
+}
+#bloc3CartesActivites1, #bloc3CartesActivites2, #activitesCartesContainer, #bloc1CartesActivites1, #bloc2CartesActivites1,  #bloc1CartesActivites2, #bloc2CartesActivites2 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
         /* FOOTER */
+
 footer {
     display: flex;
     background: #F2F2F2;
@@ -498,32 +493,49 @@ footer ul {
 }
 
         /*MEDIA QUERIES*/
-        @media screen and (min-width: 768px) and (max-width: 992px) {
-            #Hebergements, #Populaires {
-                width: 45%
-            }
 
+        /* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+            #Hebergements {
+                width: 100%;
+
+            }
+            #Populaires {
+                width: 100%;
+                display: inline-block;
+                flex-direction: row;
+            }
+        /* #inscription {
+                position: relative;
+                top: 0;
+                right: 0;
+            } */
         }
-        @media screen and (min-width: 576px) and (max-width: 768px) {
+        
+ /* @media screen and (min-width: 576px) and (max-width: 768px) {
             #Logements {
                 margin: 0;
                 display: flex;
                 flex-direction: column-reverse;
+                
             }
-        }
-        @media screen and (max-width: 576px) and (max-width: 768px) {
+        } */
+
+         /* Small devices (landscape phones, less than 768px) */
+         @media screen and (max-width: 767.98px) {
             body, section {
                 padding: 0;
                 margin: 0;
             }
-            header a {
+            header nav, header nav li, header a {
                 height: 50%;
             } 
-            header nav {
+            /* header nav {
                 display: flex;
                 flex-wrap: wrap-reverse;
         
-            }
+            } */
             .searchButton {
                 display: none;
             }
@@ -556,5 +568,5 @@ footer ul {
                 flex-direction: column;
             }
         }
-
+        
     
