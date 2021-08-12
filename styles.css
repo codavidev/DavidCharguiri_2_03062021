@@ -21,7 +21,7 @@ html, html * {
 
 main {
     width: 100%;
-    margin: 2vw;
+    margin: 0 2vw;
 }
 /* h1, h2 {
     font-size: 1.3rem;
@@ -291,7 +291,7 @@ input {
 }
 
 #Hebergements {
-    width: 888px;
+    width: 60%;
     background-color: #F2F2F2;
     border-radius: 1.25rem;
 
@@ -309,7 +309,7 @@ input {
     display: inline-block;
     width: fit-content;
     height: 12.5rem;
-    margin: auto;
+    margin: 1vw;
     border-radius: 1.25rem;
     background-color: white;
    
@@ -353,7 +353,6 @@ input {
         /*  POPULAIRES */
         
 #Populaires {
-    min-width: 30%;
     flex-direction: column;
     background-color: #F2F2F2;
     border-radius: 1.25rem;
