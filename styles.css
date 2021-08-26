@@ -1,7 +1,9 @@
 /*  --------- POLICES -------- */
 
 /* -------- PARAMETRES COMMUNS --------- */
-
+html {
+    width: 100%;
+}
 html,
 html * {
     font-family: "Raleway", sans-serif;
@@ -13,11 +15,10 @@ html * {
 }
 
 body {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    /* pour empecher que le contenu s'etire a partir de 1440px et qu'il reste centrer: 
-    @media: screen and min-width: 1441px */
-    max-width: 90rem;
+    max-width: 1440px;
 }
 main {
     margin: 0 1rem;
@@ -32,7 +33,8 @@ i {
     align-items: center;
 }
 img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 span {
     font-weight: 600;
@@ -167,10 +169,10 @@ header nav li a:hover,
     margin: 0.5em 0 1.25rem;
 }
 form {
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-size: 1.3125rem;
-    width: fit-content;
-    height: 3rem;
+    width: 26.25rem;
+    height: 3.1875rem;
     border: solid #f2f2f2 0.09375rem;
     border-radius: 1rem;
     margin: 1rem 0 0.875rem;
@@ -178,7 +180,7 @@ form {
 form * {
     box-sizing: content-box;
     font-size: 1.1875rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 .iconMap {
     height: 3rem;
@@ -242,7 +244,6 @@ input {
     display: inline-flex;
     align-items: center;
     border: 0.125rem solid #f2f2f2;
-    /* border-left: 0.0625rem solid transparent; */
     border-radius: 3rem;
     height: 3.125rem;
 
@@ -260,12 +261,7 @@ input {
 #Filtres a:hover {
     background-color: #deebff;
     border: 0.125rem solid #deebff;
-    /* border-left: 0; */
-    -webkit-transition: background-color 400ms linear;
-    -ms-transition: background-color 400ms linear;
     transition: background-color 400ms linear;
-    -webkit-transition: border 200ms linear;
-    -ms-transition: border 200ms linear;
     transition: border 200ms linear;
 }
 .filtres i {
@@ -326,12 +322,12 @@ input {
     border-radius: 1.25rem;
 }
 #titreHeberg {
-    margin: 1.25rem 1.125rem 0.5rem;
+    margin: 1rem 1.125rem 0.5rem;
     font-size: 1.37rem;
 }
 #AfficherPlus h3 {
     font-size: 1.125rem;
-    margin: 1.25rem;
+    margin: 1.5rem 1.25rem;
 }
 .cartesHebergements {
     display: flex;
@@ -343,7 +339,6 @@ input {
     margin: 1rem;
     border-radius: 1.25rem;
     background-color: white;
-
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -395,7 +390,7 @@ input {
     border-radius: 1.25rem;
 }
 #titrePopulaires {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.25rem 0 0.5rem 0;
 }
 h2 {
     font-size: 1.37rem;
@@ -424,7 +419,7 @@ h2 {
     border-radius: 1.25rem;
 
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s;
 }
 .imgPopulaires {
     width: 8rem;
@@ -446,7 +441,6 @@ h3 {
 }
 #Populaires .rating {
     font-size: 0.75rem;
-    /* align-items: center; */
     margin: 0.5rem;
     margin-bottom: 0.25em;
 }
@@ -459,7 +453,7 @@ h3 {
     width: 100%;
 }
 #titreActivites {
-    margin: 0.75rem 1.25rem 0.5rem;
+    margin: 0.5rem 1.25rem 0.75rem;
     font-size: 1.37rem;
 }
 #Activites .cartes {
@@ -559,7 +553,9 @@ footer h3 {
 /* ----- MEDIA QUERIES ------ */
 
 @media screen and (max-width: 1439.98px) {
-    
+    body {
+        width: 100%;
+    }
     main {
         margin-left: auto;
         margin-right: auto;
@@ -581,6 +577,7 @@ footer h3 {
     #L1, #L2 {
         display: flex;
         justify-content: space-around;
+        flex-wrap: nowrap;
         width: 100%;
     }
     .cartesHebergements {
@@ -592,8 +589,10 @@ footer h3 {
         margin-bottom: 2rem;
     }
     #cartesPopulairesContainer {
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         margin-left: auto;
         margin-right: auto;
     }
@@ -601,8 +600,10 @@ footer h3 {
         margin: 1.11vw;
     }
     #activitesCartesContainer {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
         margin-left: auto;
         margin-right: auto;
     }
@@ -629,6 +630,11 @@ footer h3 {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #Hebergements, #Populaires, #Activites {
+        padding-left: 0;
+        padding-right: 0;
+    }
     #Populaires {
         padding: 20px;
         margin: 0;
@@ -639,13 +645,17 @@ footer h3 {
         background-color: white;
     }
     #Activites {
-        padding: 0;
         margin-top: 2rem;
         width: 100%;
     }
     #cartesActivitesContainer {
         display: flex;
         flex-direction: column;
+    }
+    .cartesHebergements,
+    .cartesPopulaires,
+    #Activites .cartes {
+        width: 20.875rem;
     }
     #bloc3CartesActivites1,
     #bloc3CartesActivites2 {
@@ -659,45 +669,51 @@ footer h3 {
     }
     
 }
-/* Medium devices (tablets, less than 800px) */
-
 @media screen and (max-width: 799.98px) {
     #Recherche {
         margin: 1rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
     }
-    #Hebergements {
-        padding: 0;
+    #titrePopulaires {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
     }
-    .cartesHebergements,
-    #Activites .cartes {
-        width: 20.875rem;
-    }
-    #Populaires,
-    #Activites {
-        padding: 1rem;
-        padding-left: 0;
-        padding-right: 0;
+    #cartesHebergementsContainer {
+        display: flex;
+        flex-direction: row;
         margin-left: auto;
         margin-right: auto;
+        justify-content: space-around;
     }
     #L1,
     #L2 {
+        width: auto;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
-    .cartesHebergements {
-        margin: 6px;
+    #titreActivites {
+        margin: 0.75rem 1.125rem 0.5rem;
+    }
+    #cartesPopulairesContainer {
+        margin-left: auto;
+        margin-right: auto;
     }
     .cartesPopulaires {
         margin: 5.5px;
     }
     .cartesHebergements {
         height: 12.375rem;
+        margin: 6px;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
     }
     #Activites .cartes {
         height: 11.875rem;
         margin: 0.75rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
     }
 }
 /* Small devices (landscape phones, less than 768px) */
@@ -707,12 +723,6 @@ footer h3 {
         margin-right: auto;
         display: flex;
         flex-wrap: wrap-reverse;
-    }
-    .searchButton {
-        display: none;
-    }
-    .searchButtonIcon {
-        display: inline;
     }
     #Hebergements {
         width: 100%;
@@ -737,13 +747,13 @@ footer h3 {
     }
     footer nav {
         padding: 0;
-        padding-bottom:  2.25rem;
+        padding-bottom: 2.25rem;
         flex-direction: column;
     }
     footer ul {
         margin-top: 1.75rem;
         margin-left: 1.875rem;
-        width: 100%;
+        width: auto;
         flex-direction: column;
         flex-wrap: nowrap;
     }
@@ -816,7 +826,15 @@ footer h3 {
     #Recherche p {
         margin: 0.75em 0 2.25rem;
     }
-
+    form {
+        width: 20.875rem;
+    }
+    .searchButton {
+        display: none;
+    }
+    .searchButtonIcon {
+        display: inline;
+    }
     #titreFiltres {
         margin: 1.125rem 1.25rem 0.75rem 0.25rem;
     }
@@ -828,7 +846,7 @@ footer h3 {
         margin: 0.75rem 1.125rem 0.75rem 0.75rem;
     }
     #info p {
-        margin: 0.5rem 0 1rem 0.25rem;
+        margin: 0.5rem 0 1.125rem 0.25rem;
     }
     #Logements {
         margin: 0;
@@ -840,13 +858,16 @@ footer h3 {
         padding-bottom: 2rem;
     }
     #titrePopulaires {
-        margin-bottom: 1rem;
+        margin-bottom: 1.125rem;
+        margin-left: 0;
+        margin-right: 0;
     }
     #Hebergements {
         padding: 0 1.25rem 0 1.25rem;
         margin-top: 1rem;
     }
     #titreHeberg {
+        margin-top: 1.25rem;
         margin-bottom: 1rem;
         margin-left: 0;
     }
@@ -854,15 +875,15 @@ footer h3 {
         margin: 0;
     }
     #AfficherPlus {
-        margin: 2rem 0 0 0.25rem;
+        margin: 2rem 0 0 0rem;
     }
     #Activites {
-        margin-top: 1rem;
+        margin-top: 1.125rem;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
     #titreActivites {
-        margin: 1.25rem 0.25rem 0.875rem;
+        margin: 1.125rem 0.125rem 0.875rem;
     }
     .cartesHebergements,
     .cartesPopulaires,

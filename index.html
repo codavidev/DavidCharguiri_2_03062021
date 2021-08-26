@@ -5,9 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Reservia</title>
-        <!-- <link rel="stylesheet" href="reset.css"> -->
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <!-- / FIN FAVICON -->
         <link rel="stylesheet" href="styles.css" />
+        <!-- ICONS -->
         <link href="css/all.css" rel="stylesheet" />
+        <!-- / FIN ICONS -->
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +20,7 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
-        <!-- / GOOGLE FONTS -->
+        <!-- / FIN GOOGLE FONTS -->
     </head>
     <body>
         <!-- DEBUT HEADER -->
@@ -105,14 +110,14 @@
                 </section>
                 <!-- / FIN SECTION FILTRES -->
                 <!-- DEBUT SECTION INFO -->
-                <section id="info" class="flexNoWrap itemsCenter">
+                <div id="info" class="flexNoWrap itemsCenter">
                     
                         <i class="fas fa-info"></i>
                         <p>
                             Plus de 500 logements sont disponibles dans cette ville
                         </p>
                     
-                </section>
+                </div>
                 <!-- / FIN SECTION INFO -->
             </section>
             <!-- / FIN SECTION RECHERCHE -->
@@ -125,7 +130,7 @@
                     </div>
                     <div id="cartesHebergementsContainer">
                         <div id="L1" class="flexWrap">
-                            <article class="cartesHebergements">
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
@@ -145,8 +150,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="cartesHebergements">
+                            </a>
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
@@ -163,8 +168,8 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="cartesHebergements">
+                            </a>
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
@@ -183,11 +188,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </article>
+                            </a>
                         </div>
 
                         <div id="L2" class="flexWrap">
-                            <article class="cartesHebergements">
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
@@ -208,8 +213,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="cartesHebergements">
+                            </a>
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
@@ -229,8 +234,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </article>
-                            <article class="cartesHebergements">
+                            </a>
+                            <a href="" class="cartesHebergements">
                                 <img
                                     class="imgHebergements"
                                     src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
@@ -248,7 +253,7 @@
                                         <i class="fas fa-star"></i>
                                     </div>
                                 </div>
-                            </article>
+                            </a>
                         </div>
                     </div>
                     <div id="AfficherPlus">
@@ -266,7 +271,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div id="cartesPopulairesContainer">
-                        <article class="cartesPopulaires">
+                        <a href="" class="cartesPopulaires">
                             <img
                                 class="imgPopulaires"
                                 src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
@@ -285,8 +290,8 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                             </div>
-                        </article>
-                        <article class="cartesPopulaires">
+                        </a>
+                        <a href="" class="cartesPopulaires">
                             <img
                                 class="imgPopulaires"
                                 src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
@@ -308,8 +313,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </article>
-                        <article class="cartesPopulaires">
+                        </a>
+                        <a href="" class="cartesPopulaires">
                             <img
                                 class="imgPopulaires"
                                 src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
@@ -330,7 +335,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </a>
                     </div>
                 </section>
                 <!-- / FIN POPULAIRES -->
@@ -345,45 +350,41 @@
                     class="flexWrap flexRow"
                 >
                     <div id="bloc3CartesActivites1" class="flexRow">
-                        <!-- <div id="bloc1CartesActivites1" class="flexColumn"> -->
-                            <article id="vieuxport" class="cartes">
+                            <a href="" id="vieuxport" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Vieux Port</h3>
                                 </div>
-                            </article>
-                        <!-- </div> -->
+                            </a>
                         <div id="bloc2CartesActivites1" class="flexColumn flexBetween">
-                            <article id="pomegues" class="cartes">
+                            <a href="" id="pomegues" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Fort de Pomègues</h3>
                                 </div>
-                            </article>
-                            <article id="frioul" class="cartes">
+                            </a>
+                            <a href="" id="frioul" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Îles du Frioul</h3>
                                 </div>
-                            </article>
+                            </a>
                         </div>
                     </div>
                     <div id="bloc3CartesActivites2" class="flexRow">
-                        <!-- <div id="bloc1CartesActivites2"> -->
-                            <article id="calanques" class="cartes">
+                            <a href="" id="calanques" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Parc National des Calanques</h3>
                                 </div>
-                            </article>
-                        <!-- </div> -->
+                            </a>
                         <div id="bloc2CartesActivites2" class="flexColumn flexBetween">
-                            <article id="garde" class="cartes">
+                            <a href="" id="garde" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Notre-Dame-de-la-Garde</h3>
                                 </div>
-                            </article>
-                            <article id="longchamp" class="cartes">
+                            </a>
+                            <a href="" id="longchamp" class="cartes">
                                 <div class="cartesDescriptionActivites">
                                     <h3>Parc Longchamp</h3>
                                 </div>
-                            </article>
+                            </a>
                         </div>
                     </div>
                 </div>
