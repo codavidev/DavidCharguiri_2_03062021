@@ -1,12 +1,11 @@
 /*  --------- POLICES -------- */
-
-/* -------- PARAMETRES COMMUNS --------- */
-html {
-    width: 100%;
-}
 html,
 html * {
     font-family: "Raleway", sans-serif;
+}
+/* -------- PARAMETRES COMMUNS --------- */
+html {
+    width: 100%;
 }
 * {
     padding: 0;
@@ -146,7 +145,6 @@ header nav li a:hover,
     color: #0065fc;
     border-top: 0.125rem solid #0065fc;
 }
-
 #inscription {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
