@@ -244,7 +244,7 @@ input {
     border: 0.125rem solid #f2f2f2;
     border-radius: 3rem;
     height: 3.125rem;
-
+    transition: background-color 400ms linear, border 200ms linear;
     margin: 1rem 0.75rem;
 }
 .filtres h3 {
@@ -258,10 +258,7 @@ input {
 /* animation au survol de la souris */
 #Filtres a:hover {
     background-color: #deebff;
-    border: 0.125rem solid #deebff;
-    transition: background-color 400ms linear;
-    transition: border 200ms linear;
-}
+    border: 0.125rem solid #deebff;}
 .filtres i {
     font-size: 1.25rem;
 }
